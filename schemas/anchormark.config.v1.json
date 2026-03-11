@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "network",
+    "firewall",
+    "routing"
+  ],
+  "properties": {
+    "network": {
+      "type": "object"
+    },
+    "firewall": {
+      "type": "object"
+    },
+    "routing": {
+      "type": "object"
+    }
+  }
+}
