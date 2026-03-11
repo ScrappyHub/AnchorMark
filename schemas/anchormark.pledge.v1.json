@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "schema",
+    "time_utc",
+    "commit_hash",
+    "sig_rel_path"
+  ],
+  "properties": {
+    "schema": { "type": "string" },
+    "time_utc": { "type": "string" },
+    "commit_hash": { "type": "string" },
+    "sig_rel_path": { "type": "string" },
+    "log_hash": { "type": "string" }
+  },
+  "additionalProperties": true
+}
