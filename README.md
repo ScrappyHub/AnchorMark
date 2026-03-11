@@ -70,3 +70,120 @@ AnchorMark produces **truthpacks**.
 A truthpack is a deterministic artifact that represents a security state.
 
 Example contents:
+
+
+manifest.json
+packet_id.txt
+sha256sums.txt
+payload/
+policy.json
+routing.json
+firewall.json
+audit.json
+
+
+These artifacts follow the canonical packet structure used across the ecosystem.
+
+---
+
+# Integration
+
+AnchorMark integrates with:
+
+### WatchTower
+
+Device attestation and telemetry verification.
+
+### NeverLost (NFL)
+
+Witness duplication and artifact verification.
+
+### Packet Constitution
+
+Canonical packet format.
+
+---
+
+# Security Architecture
+
+AnchorMark implements a deterministic security model.
+
+Security state is represented as:
+
+
+security state
+→ canonical artifact
+→ cryptographic hash
+→ signature
+→ receipt
+
+
+This ensures security state can be independently verified.
+
+---
+
+# Runtime Layout
+
+AnchorMark runtime directories:
+
+
+_runtime_local/
+
+keys/
+pledges/
+outbox/
+nfl_inbox/
+
+
+Purpose:
+
+| Directory | Purpose |
+|--------|--------|
+| keys | signing keys |
+| pledges | append-only security pledge log |
+| outbox | produced artifacts |
+| nfl_inbox | witness artifacts |
+
+---
+
+# Pipeline
+
+AnchorMark pipeline:
+
+
+bootstrap
+→ policy compilation
+→ artifact creation
+→ verification
+→ receipt emission
+
+
+Each step produces deterministic output.
+
+---
+
+# Security Model
+
+AnchorMark is designed to support:
+
+- offline verification
+- deterministic security state
+- independent validation
+- replayable security audit
+
+---
+
+# Future Expansion
+
+AnchorMark provides the infrastructure required for:
+
+- intrusion detection
+- intrusion prevention
+- distributed network policy verification
+- security artifact distribution
+
+---
+
+# License
+
+TBD
