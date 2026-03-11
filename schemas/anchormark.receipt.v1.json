@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "schema",
+    "event_type",
+    "time_utc"
+  ],
+  "properties": {
+    "schema": { "type": "string" },
+    "event_type": { "type": "string" },
+    "time_utc": { "type": "string" },
+    "packet_id": { "type": "string" },
+    "commit_hash": { "type": "string" },
+    "runtime_root": { "type": "string" },
+    "repo_root": { "type": "string" }
+  },
+  "additionalProperties": true
+}
